@@ -1,0 +1,137 @@
+.landing section.first {
+    height: 70vh;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.landing section.first .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.landing section.first .main-content .main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    direction: ltr;
+}
+
+.landing section.first .main-content .main-text a {
+    display: block;
+    text-decoration: none;
+}
+
+.landing section.first .main-content .main-text a img {
+    max-width: 45px;
+    transform: translateY(35%);
+}
+
+.landing section.first .main-content .main-text h1 {
+    font-size: 110px;
+    font-weight: normal;
+    margin: 0;
+    color: white;
+}
+
+.landing section.first .main-content .main-text h1 span {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-02);
+}
+
+.landing section.first .main-content span.lamp {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    outline-width: 8px;
+    outline-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    animation-name: turn-on-the-lights;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.landing section.first .main-content span.lamp:nth-last-of-type(2) {
+    top: 55%;
+    left: 10%;
+}
+
+.landing section.first .main-content span.lamp:nth-last-of-type(3) {
+    top: 80%;
+    left: 90%;
+}
+
+
+.landing section.second {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.landing section.second .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.landing section.second .container a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.landing section.second .container a .image {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-02);
+    border-radius: 5px;
+}
+
+.landing section.second .container a .image img {
+    display: block;
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+.landing section.second .container a span {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.landing section.second .container a span::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--color-02);
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    transition: 1s;
+}
+
+.landing section.second .container a:hover span::after {
+    width: 80%;
+}
+
+@keyframes turn-on-the-lights {
+    from {
+        outline-color: rgba(255, 255, 255, 0.1);
+    }
+    to {
+        outline-color: rgba(255, 255, 255, 0.4);
+    }
+}
