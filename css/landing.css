@@ -5,6 +5,63 @@
     flex-direction: column;
 }
 
+.landing section.first header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.landing section.first header .container a {
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.landing section.first header .container a.logo img {
+    max-width: 40px;
+}
+
+
+.landing section.first header .container ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.landing section.first header .container ul a {
+    position: relative;
+}
+
+.landing section.first header .container ul a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-02);
+    transition: 0.5s;
+}
+
+.landing section.first header .container ul a:hover::after,
+.landing section.first header .container ul a.active::after {
+    width: 80%;
+}
+
+.landing section.first header .container a.contact {
+    font-size: 14px;
+    padding: 4px 10px;
+    background-color: var(--color-02);
+    border-radius: 50px;
+}
+
 .landing section.first .main-content {
     flex: 1;
     display: flex;
@@ -19,6 +76,7 @@
     align-items: center;
     column-gap: 20px;
     direction: ltr;
+    margin-bottom: 20px;
 }
 
 .landing section.first .main-content .main-text a {
@@ -42,6 +100,52 @@
     font-weight: bold;
     text-transform: uppercase;
     color: var(--color-02);
+}
+
+.landing section.first .main-content form {
+    display: flex;
+    justify-content: center;
+}
+
+.landing section.first .main-content form div {
+    width: 40%;
+    position: relative;
+}
+
+.landing section.first .main-content form div input {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 15px 20px 15px 60px;
+    background-color: white;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 50px;
+}
+
+.landing section.first .main-content form div input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.landing section.first .main-content form div input[type="search"]::-moz-clear {
+    display: none;
+}
+
+.landing section.first .main-content form div button {
+    display: block;
+    width: fit-content;
+    font-size: 20px;
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-02);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .landing section.first .main-content span.lamp {
@@ -73,21 +177,21 @@
 
 
 .landing section.second {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .landing section.second .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .landing section.second .container a {
     display: block;
     text-decoration: none;
     color: black;
-    padding: 10px;
 }
 
 .landing section.second .container a .image {
